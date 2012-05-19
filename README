@@ -1,0 +1,6 @@
+notify.js requires latest jQuery. It is a very simple plugin to use and in return it creates a notification box.
+
+Syntax:
+	$('.myclass').notify('my message here', {'optional':'css'});
+
+If there is some error in the message, it can be viewed in console. Second argument should be Array and should have supported css properties in jQuery.
