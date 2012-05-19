@@ -1,6 +1,20 @@
 notify.js requires latest jQuery. It is a very simple plugin to use and in return it creates a notification box.
 
+Usage:
+
+	There should be a div, span whatever is needed to call upon the notify function.
+	Just create the area in which notification is desired and call the notify function on it and TADA!
+
+	If reposition is needed use css property top, left, right, bottom.
+
+
 Syntax:
+
 	$('.myclass').notify('my message here', {'optional':'css'});
 
-If there is some error in the message, it can be viewed in console. Second argument should be Array and should have supported css properties in jQuery.
+
+ARGUMENTS:
+	First argument is a message and it has to be string and should exist.
+	Second argument is an optional Array with css-property, value.
+
+If there is some error in the message, it can be viewed in console. Second argument should be Array and should have supported css properties in jQuery. Please see the test.html for example and do not forget to include the jquery-latest as jquery.js.
