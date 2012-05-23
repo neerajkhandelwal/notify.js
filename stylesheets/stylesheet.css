@@ -374,6 +374,25 @@ Full-Width Styles
   background: #212121;
 }
 
+.demo-button{
+	float: right; 
+	height: 40px; 
+	width: 120px; 
+	margin-right: 20px; 
+	font-size: 18px; 
+	color: #FFF; 
+	background-color: #007ECF; 
+	border-width: 1px; 
+	border-color: #007EDF; 
+	text-shadow: 0px 1px #666; 
+	-moz-text-shadow: 0px 1px #666; 
+	-webkit-text-shadow: 0px 1px #666; 
+	border-radius: 4px; 
+	-moz-border-radius:4px; 
+	-webkit-border-radius:4px; 
+	font-family:Myriad Pro, Calibri, Helvetica, Arial, sans-serif;
+}
+
 
 
 /*******************************************************************************
