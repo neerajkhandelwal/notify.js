@@ -5,7 +5,13 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Notify.js : jQuery plugin to display notification." />
-
+    <script type="text/javscript" src="javascripts/jquery.js"></script>
+    <script type="text/javscript" src="javascripts/notify.js"></script>
+    <script type="text/javascript">
+	function demofunc(){
+		$('.notification').notify("Demo notification", {'background-color':'#CCC', 'color':'#222'});
+	}
+    </script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Notify.js</title>
@@ -14,12 +20,13 @@
   <body>
 
     <!-- HEADER -->
+    <div class="notification"></div>
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/neerajkhandelwal/notify.js">View on GitHub</a>
 
           <h1 id="project_title">Notify.js</h1>
-          <h2 id="project_tagline">jQuery plugin to display notification.</h2>
+          <h2 id="project_tagline">jQuery plugin to display notification. <input type="button" value = "DEMO" style="float:right; height:40px; width:120px; margin-right:20px; font-size:18px; color:#FFF; background-color:#3299CC; border-width: 1px; border-color: #3299CC; text-shadow: 0px 1px #666; -moz-text-shadow: 0px 1px #666; -webkit-text-shadow: 0px 1px #666; border-radius: 5px; -moz-border-radius:5px; -webkit-border-radius:5px;" onclick="javascript:demofunc();"/></h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/neerajkhandelwal/notify.js/zipball/master">Download this project as a .zip file</a>
