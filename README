@@ -1,20 +1,34 @@
 notify.js requires latest jQuery. It is a very simple plugin to use and in return it creates a notification box.
 
-Usage:
+USAGE:
 
-	There should be a div, span whatever is needed to call upon the notify function.
+	There should be a div or span with some identification for selector is needed to call upon the notify function and no style is required. 
+	Style is set using second argument of the function.
+	
 	Just create the area in which notification is desired and call the notify function on it and TADA!
 
 	If reposition is needed use css property top, left, right, bottom.
+	
+	
+			$('.myclass').notify('my message here', {'top':'200px', 'background-color':'#333'},{'delay': 4000, 'fadein': 200, 'fadeout':1000});
 
 
-Syntax:
+SYNTAX:
 
-	$('.myclass').notify('my message here', {'optional':'css'});
+	$(selector).notify(Message, { css }, { delay, fadein, fadeout });
 
 
 ARGUMENTS:
-	First argument is a message and it has to be string and should exist.
-	Second argument is an optional Array with css-property, value.
 
-If there is some error in the message, it can be viewed in console. Second argument should be Array and should have supported css properties in jQuery. Please see the test.html for example and do not forget to include the jquery-latest as jquery.js.
+	First argument is a Message and it has to be string and should exist.
+	
+	Second argument in an optional css array. If nothing is to be specified leave array blank({ }).
+
+	Third argument is an optional array with defined keys delay, fadein and fadeout, in the same order.
+	Delay is the time for notification display, fadein is the time for full appearance of notification and fadeout is the time for notification to vanish after delay. All the values are in millisecond. 
+	Minimum value that can be set for each variable is 1. If 0 will be specified then default values(delay : 500, fadein : 4000, fadeout : 1000) will be taken.
+
+
+
+
+If there is some error in the message, it can be viewed in console. Second argument should be Array and should have supported css properties in jQuery. Please see the example.html for example and do not forget to include the jquery-latest as jquery.js.
