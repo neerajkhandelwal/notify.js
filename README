@@ -25,6 +25,7 @@ ARGUMENTS:
 	Second argument in an optional css array. If nothing is to be specified leave array blank({ }).
 
 	Third argument is an optional array with defined keys delay, fadein and fadeout, in the same order.
+
 	Delay is the time for notification display, fadein is the time for full appearance of notification and fadeout is the time for notification to vanish after delay. All the values are in millisecond. 
 	Minimum value that can be set for each variable is 1. If 0 will be specified then default values(delay : 500, fadein : 4000, fadeout : 1000) will be taken.
 
