@@ -1,5 +1,8 @@
 //Javascript file
+//Author : Neeraj Khandelwal
+//License : MIT License
 /* Notify is a jQuery plugin to display notification. For example, if there is a update on the website and you want the user to know it. You can notify her by calling notify function of the plugin. It will display the notification at the your desired position.*/
+
 
 $.fn.notify = function(){
 	
