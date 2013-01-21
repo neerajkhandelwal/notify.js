@@ -16,7 +16,7 @@ $.fn.notify = function(){
 			'font-weight': 'bolder',
 			'color': '#FFF',
 			'position': 'absolute',
-			'width': 'auto',
+			'width': '250px',
 			'right': '30px',
 			'top': '50px',
 			'font-align': 'center',
@@ -72,11 +72,16 @@ $.fn.notify = function(){
 
 	// Animation.
 	if(typeof(arguments[0]) == "string" ){
-		$(this).text(arguments[0]).fadeIn(fadein).delay(delay).fadeOut(fadeout);
+		body = '<div class="notify-close" style="float: right; cursor: pointer" data-parent="'+ $(this).selector +'">x</div><div class="notify-notification">'+ arguments[0] +'</div>';
+		$(this).html(body).fadeIn(fadein).delay(delay).fadeOut(fadeout);
 	}
 	else{
 		// It actually is not an error condition but requires your attention in case you fail to provide data.
 		console.error("Error: Data not string or is empty!");
 	}
 };
+
+$('.notify-close').live('click', function(){
+	$($(this).data('parent')).css('display', 'none');
+});
 
