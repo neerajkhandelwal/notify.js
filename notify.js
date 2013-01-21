@@ -1,8 +1,5 @@
 //Javascript file
-//Author : Neeraj Khandelwal
-//License : MIT License
 /* Notify is a jQuery plugin to display notification. For example, if there is a update on the website and you want the user to know it. You can notify her by calling notify function of the plugin. It will display the notification at the your desired position.*/
-
 
 $.fn.notify = function(){
 	
@@ -19,7 +16,7 @@ $.fn.notify = function(){
 			'font-weight': 'bolder',
 			'color': '#FFF',
 			'position': 'absolute',
-			'width': 'auto',
+			'width': '250px',
 			'right': '30px',
 			'top': '50px',
 			'font-align': 'center',
@@ -75,7 +72,8 @@ $.fn.notify = function(){
 
 	// Animation.
 	if(typeof(arguments[0]) == "string" ){
-		$(this).text(arguments[0]).fadeIn(fadein).delay(delay).fadeOut(fadeout);
+		body = '<div class="notify-close" style="float: right; cursor: pointer" data-parent="'+ $(this).selector +'">x</div><div class="notify-notification">'+ arguments[0] +'</div>';
+		$(this).html(body).fadeIn(fadein).delay(delay).fadeOut(fadeout);
 	}
 	else{
 		// It actually is not an error condition but requires your attention in case you fail to provide data.
@@ -83,3 +81,6 @@ $.fn.notify = function(){
 	}
 };
 
+$('.notify-close').live('click', function(){
+	$($(this).data('parent')).css('display', 'none');
+});
