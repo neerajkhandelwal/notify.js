@@ -1,5 +1,8 @@
 notify.js requires latest jQuery. It is a very simple plugin to use and in return it creates a notification box.
 
+DEMO:
+        http://neerajkhandelwal.github.com/notify.js/
+
 USAGE:
 
 	There should be a div or span with some identification for selector is needed to call upon the notify function and no style is required. 
